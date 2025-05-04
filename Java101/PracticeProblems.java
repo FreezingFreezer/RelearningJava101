@@ -16,4 +16,29 @@ public static int[] reverseArray(int[] arr){
     }
     return reversed;
 }
+public static int sumOfArray(int[][] arr) {
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = 0; j < arr[i].length; j++) {
+            sum += arr[i][j];
+        }
+    }
+    return sum;
+}
+public static int[] fib(int[] arr){
+    int[] fibArr = new int[arr.length];
+    for (int i = 0; i < arr.length; i++) {
+        if (arr[i] <= 1){
+            if (arr[i] == 0) {
+                fibArr[i] = 0;
+            } else if (arr[i] == 1) {
+                fibArr[i] = 1;
+            }
+        }
+        if (arr[i] > 1){
+            fibArr[i] = arr[i]-1 + arr[i]-2;
+        }
+    }
+    return fibArr;
+}
 }
